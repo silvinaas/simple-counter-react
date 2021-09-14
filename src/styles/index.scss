@@ -11,3 +11,52 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.contador{
+    display: flex;
+    width: 250px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+   height: 100vh;
+ 
+    
+   
+}
+
+.numerito{
+    background-color: black;
+    width: 100px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left:15px;
+    padding-right: 15px;
+    position: relative;
+    
+}
+
+.reloj{
+    background-color: black;
+    width:100px;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+.boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   background-color: black;
+   color: lightcoral ;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   border-radius: 5px;
+    
+}
