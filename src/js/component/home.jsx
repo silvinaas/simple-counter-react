@@ -29,11 +29,6 @@ const Home = props => {
 			<div className="numerito">
 				<h1>{props.unidad}</h1>
 			</div>
-			<div>
-				<button id="botones" className="boton" onClick="clickHandler">
-					Restart
-				</button>
-			</div>
 		</div>
 	);
 };

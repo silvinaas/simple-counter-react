@@ -19,6 +19,18 @@ let milesima = 0;
 let milesimax2 = 0;
 let milesimax3 = 0;
 
+let temporizar = true;
+const resetear = () => {
+	contador = 0;
+};
+
+const pausar = () => {
+	temporizar = false;
+};
+
+const reanudar = () => {
+	temporizar = true;
+};
 // var listenerFunction = function(){
 // 	contador = 0
 // }
@@ -32,17 +44,33 @@ setInterval(function() {
 	decena = Math.floor(contador / 10) % 10;
 	unidad = Math.floor(contador) % 10;
 
-	ReactDOM.render(
-		<Home
-			unidad={unidad}
-			decena={decena}
-			centena={centena}
-			milesima={milesima}
-			milesimax2={milesimax2}
-			milesimax3={milesimax3}
-		/>,
-		document.querySelector("#app")
-	);
-	contador++;
+	if (temporizar == true) {
+		ReactDOM.render(
+			<div className="contador">
+				<Home
+					unidad={unidad}
+					decena={decena}
+					centena={centena}
+					milesima={milesima}
+					milesimax2={milesimax2}
+					milesimax3={milesimax3}
+				/>
+
+				<button className="boton" onClick={resetear}>
+					RESETEAR
+				</button>
+
+				<button className="boton" onClick={pausar}>
+					PAUSAR
+				</button>
+
+				<button className="boton" onClick={reanudar}>
+					REANUDAR
+				</button>
+			</div>,
+			document.querySelector("#app")
+		);
+		contador++;
+	}
 }, 1000);
 //render your react application
