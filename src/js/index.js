@@ -31,10 +31,6 @@ const pausar = () => {
 const reanudar = () => {
 	temporizar = true;
 };
-// var listenerFunction = function(){
-// 	contador = 0
-// }
-// document.getElementById("botones").addEventListener('click', listenerFunction);
 
 setInterval(function() {
 	milesimax3 = Math.floor(contador / 100000) % 10;
@@ -46,7 +42,7 @@ setInterval(function() {
 
 	if (temporizar == true) {
 		ReactDOM.render(
-			<div className="contador">
+			<div className="container d-flex align-items-center">
 				<Home
 					unidad={unidad}
 					decena={decena}
@@ -56,17 +52,26 @@ setInterval(function() {
 					milesimax3={milesimax3}
 				/>
 
-				<button className="boton" onClick={resetear}>
-					RESETEAR
-				</button>
-
-				<button className="boton" onClick={pausar}>
-					PAUSAR
-				</button>
-
-				<button className="boton" onClick={reanudar}>
-					REANUDAR
-				</button>
+				<div className="d-grid gap-2 d-md-flex span4">
+					<button
+						className="btn btn-primary me-md-2"
+						onClick={resetear}
+						type="button">
+						Resetear
+					</button>
+					<button
+						className="btn btn-primary"
+						onClick={pausar}
+						type="button">
+						Pausar
+					</button>
+					<button
+						className="btn btn-primary"
+						onClick={reanudar}
+						type="button">
+						Reanudar
+					</button>
+				</div>
 			</div>,
 			document.querySelector("#app")
 		);
