@@ -42,7 +42,7 @@ setInterval(function() {
 
 	if (temporizar == true) {
 		ReactDOM.render(
-			<div className="container d-flex align-items-center">
+			<div className="container">
 				<Home
 					unidad={unidad}
 					decena={decena}
@@ -52,21 +52,24 @@ setInterval(function() {
 					milesimax3={milesimax3}
 				/>
 
-				<div className="d-grid gap-2 d-md-flex span4">
+				<div
+					className="btn-group row align-items-center d-flex justify-content-center align-items-center"
+					role="group"
+					aria-label="Basic example">
 					<button
-						className="btn btn-primary me-md-2"
+						className="btn btn-warning col-1 "
 						onClick={resetear}
 						type="button">
 						Resetear
 					</button>
 					<button
-						className="btn btn-primary"
+						className="btn btn-danger col-1"
 						onClick={pausar}
 						type="button">
 						Pausar
 					</button>
 					<button
-						className="btn btn-primary"
+						className="btn btn-success col-1"
 						onClick={reanudar}
 						type="button">
 						Reanudar

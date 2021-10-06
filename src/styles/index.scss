@@ -16,25 +16,31 @@
    
 
 
+.contador{
+    background-color: black;
+    width:700px;
+    height: 80px;
+}
+
 .numerito{
     background-color: black;
     width: 100px;
     height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
    
-    position: relative;
+    // position: relative;
     
 }
 
 .reloj{
     background-color: black;
     width:100px;
-    display: flex;
+    // display: flex;
     height: 80px;
-    align-items: center;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
   
     
 }
